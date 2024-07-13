@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 2%;
+}
+
+table {
+  width: 80%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+table th, table td {
+  width: 25%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 1%;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+table th p, table td p {
+  text-align: justify;
+}
+
+thead {
+  background: #6c1d45;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 2%;
+}
+thead th{
+  font-size: 18px;
+}
+
+.btn-for {
+  background: #6c1d45;
+  width: 60%;
+  height: auto;
+  padding: 1%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 18px;
+  font-weight: 100; /* Thinner text */
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tache {
+  width: 20%;
+  height: auto;
+  padding: 0.2%;
+  border-radius: 8px;
+  font-size: 30px;
+  margin-left: 40%;
+  margin-right: 40%;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  overflow: hidden;
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#lang {
+    width: 30%;
+    height: auto;
+    padding: 0.3%;
+    overflow: hidden;
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 1%;
+}
+
+table {
+    width: 99%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: none;
+    margin: 0.2%;
+}
+
+th {
+    width: 18%;
+    height: 7vh;
+    box-sizing: border-box;
+    padding: 0.5%;
+    border: solid gray 0.1%;
+}
+
+tr:first-child {
+    background: #6c1d45;
+    color: white;
+}
+
+tr:last-child {
+    background: #AAAFAE;
+}
+
+#btn-elec {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-ac {
+    width: 10%;
+    height: auto;
+    padding: 0.8%;
+    background: #6c1d45;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    margin: 1%
+}
+
+#sec1, #sec2 {
+    width: 48%;
+    height: auto;
+    display: block;
+    margin: 0.2%;
+}
+
+#sec2 {
+    text-align: right;
+}
+
+#sec2 .btn-ac {
+    float: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+.popup p{
+	margin-top: 8%;
+	width: 100%;
+	margin-bottom: 5%;
+}
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+#cancel-btn{
+	background-color: gray;
+	color: white;
+}
+.popup-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #6c1d45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    background-color: #5a162f;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #6c1d45;
+}
+
+.close:hover {
+    color: #5a162f;
+}
+
+#caj-tabla{
+	width: 100%;
+	height:100%;
+	display: flex;
+}

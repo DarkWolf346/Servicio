@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>buscador</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="bar-nav">
+		<input type="text" value="Ingresa la busqueda" id="search-bar">
+		<div id="btn-elm">&times;</div>
+	</div>
+	<div id="container">
+		<div class="target" name="leopardo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Panthera_pardus_close_up.jpg/1200px-Panthera_pardus_close_up.jpg" alt="">
+          <p>Leopardo</p>
+		</div>
+		<div class="target" name="lobo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Canis_lupus_265b.jpg/800px-Canis_lupus_265b.jpg" alt="">
+          <p>Lobo</p>
+		</div>
+		<div class="target" name="camaleon">
+          <img src="https://content.nationalgeographic.com.es/medio/2022/12/12/camaleon-1_71b24afc_221212154734_1280x720.jpg" alt="">
+          <p>Camaleon</p>
+		</div>
+		<div class="target" name="jaiba">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfqamahU4yqIn1AogNhYKIWhAIyMILX0qkfqfl6xYz1a7gdMncyMkJuAqOGKoeYvr16fg&usqp=CAU" alt="">
+          <p>Jaiba</p>
+		</div>
+
+	</div>
+
+</body>
+
+
+<script>
+		document.getElementById('search-bar').addEventListener('focus', function() {
+			if (this.value === 'Ingresa la busqueda') {
+				this.value = '';
+			}
+		});
+		document.getElementById('search-bar').addEventListener('input', function() {
+			let filter = this.value.toLowerCase();
+			let targets = document.getElementsByClassName('target');
+			
+			for (let i = 0; i < targets.length; i++) {
+				let name = targets[i].getAttribute('name');
+				if (name.toLowerCase().indexOf(filter) > -1) {
+					targets[i].style.display = '';
+				} else {
+					targets[i].style.display = 'none';
+				}
+			}
+		});
+
+		document.getElementById('btn-elm').addEventListener('click', function() {
+			document.getElementById('search-bar').value = '';
+			let targets = document.getElementsByClassName('target');
+			
+			for (let i = 0; i < targets.length; i++) {
+				targets[i].style.display = '';
+			}
+		});
+
+		document.getElementById('btn-elm').addEventListener(function(){
+			let barra=document.getElementById('search-bar');
+
+			barra.value=" ";
+
+		});
+	</script>
+</html>

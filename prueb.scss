@@ -1,0 +1,22 @@
+//usar modulos
+
+@use '_nombredelmodulo'
+
+//variables
+
+$color-ipn:#fff;
+
+
+h1{
+	background: $color-ipn;
+}
+
+//anidacion
+.target{
+	h2{
+		color:white;
+	}
+	p{
+		color: black;
+	}
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pagina1</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<h1 style="margin:1% ;">Selector</h1>
+	<form action="#">
+      <select name="lenguajes" id="lang">
+      	<option value="" disabled selected>Selecciona el Idioma</option>
+        <option value="Español">Español</option>
+        <option value="Ingles">Ingles</option>
+        <option value="Frances">Frances</option>
+        <option value="Chino">Chino</option>
+        <option value="Aleman">Aleman</option>
+      </select>
+	</form>
+	
+	<table border="solid 1px">
+		<tr>
+			<th>Unidad</th>
+			<th>Hombres</th>
+			<th>Mujeres</th>
+			<th>Total</th>
+			<th>Justificacion</th>
+
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th rowspan="3">
+				<input type="text" id="caj-tabla">
+			</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+
+		</tr>
+		<tr>
+			<th>Total</th>
+			<th colspan="4"></th>
+		</tr>
+	</table>
+	<div id="btn-elec">
+		<div id="sec1">
+			<div class="btn-ac" id="delete-btn">
+				<p>Eliminar</p>
+			</div>
+		</div>		
+
+		<div id="sec2">
+			<div class="btn-ac">
+				<p>Enviar</p>
+			</div>
+			<div class="btn-ac">
+				<p>Guardar</p>
+			</div>
+		</div>
+
+	</div>
+
+     <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <p>¿Seguro que desea eliminar?</p>
+            <button id="cancel-btn" class="popup-btn">Cancelar</button>
+            <button id="confirm-delete-btn" class="popup-btn">Eliminar</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+		document.addEventListener('DOMContentLoaded', function () {
+    const deleteBtn = document.getElementById('delete-btn');
+    const popup = document.getElementById('popup');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+    const closePopup = document.getElementById('close-popup');
+
+    deleteBtn.addEventListener('click', function () {
+        popup.style.display = 'flex';
+    });
+
+    cancelBtn.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+
+    closePopup.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+
+    confirmDeleteBtn.addEventListener('click', function () {
+        // Aquí puedes agregar la lógica para eliminar el elemento
+        alert('Elemento eliminado');
+        popup.style.display = 'none';
+    });
+});
+</script>
+</html>
