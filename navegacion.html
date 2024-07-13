@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navegacion</title>
+	<link rel="stylesheet" href="nave.css">
+	<style>
+		.pres-inf {
+			display: none; /* Ocultar todos los contenedores por defecto */
+		}
+	</style>
+</head>
+<body>
+	<div id="main-cont">
+		<div id="cont-sec">
+			<div id="nav-coint">
+				<ul>
+					<li class="select" name="nv-ms">NIVEL MEDIO SUPERIOR</li>
+					<li class="select" name="nv-s">NIVEL SUPERIOR</li>
+					<li class="select" name="c-in">CENTROS DE INVESTIGACIÓN</li>
+					<li class="select" name="c-vyd">CENTROS VINCULACIÓN Y DESARROLLO REGIONAL</li>
+					<li class="select" name="c-lang">CENTRO DE LENGUAS EXTRANJERAS</li>
+				</ul>
+			</div>
+			<div id="frames">
+				<div class="pres-inf" name="nv-ms">
+					<h2>Nivel Medio</h2>
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+
+				</div>
+				<div class="pres-inf" name="nv-s">
+					<h2>Nivel Superior</h2>
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+				</div>
+				<div class="pres-inf" name="c-in">
+					<h2>Centro de investigacion</h2>
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+				</div>
+				<div class="pres-inf" name="c-vyd">
+					<h2>Centro de vinculacion</h2>
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+				</div>
+				<div class="pres-inf" name="c-lang">
+					<h2>Lenguas Extrangeras</h2>
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+					Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Harum et porro quidem voluptas nisi quo, iste eum maiores dicta soluta repellendus sit reprehenderit. Vero quasi, placeat animi delectus exercitationem minus.
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<script>
+		// Selecciona todos los elementos li
+		const items = document.querySelectorAll('.select');
+
+		// Selecciona todos los contenedores de contenido
+		const contentBoxes = document.querySelectorAll('.pres-inf');
+
+		// Añade el evento click a cada elemento li
+		items.forEach(item => {
+			item.addEventListener('click', () => {
+				// Obtén el nombre del elemento li clickeado
+				const name = item.getAttribute('name');
+
+				// Oculta todos los contenedores de contenido
+				contentBoxes.forEach(box => {
+					box.style.display = 'none';
+				});
+
+				// Remueve la clase activa de todos los elementos li
+				items.forEach(i => {
+					i.classList.remove('active');
+				});
+
+				// Añade la clase activa al elemento li clickeado
+				item.classList.add('active');
+
+				// Muestra el contenedor correspondiente
+				const activeBox = document.querySelector(`.pres-inf[name="${name}"]`);
+				if (activeBox) {
+					activeBox.style.display = 'block';
+				}
+			});
+		});
+	</script>
+</body>
+</html>

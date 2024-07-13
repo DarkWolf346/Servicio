@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$color-ins:#6c1d45;
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	box-sizing: border-box;
+}
+
+#main-cont{
+	width: calc(100vw - 50px);
+	height: auto;
+	padding: 1%;
+	overflow: hidden;
+	box-sizing: border-box;
+	border: solid ;
+	float: left;
+	margin: 1%;
+
+	#cont-sec{
+		width: 99%;
+		height: auto;
+		overflow: hidden;
+		box-sizing: border-box;
+		margin: 0.5%;
+		border: solid gray 2px;
+		padding: 1%;
+		border-radius: 2px;
+	}
+	
+	#nav-coint{
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+		background:#ABABAB;
+		ul{
+			width: 100%;
+			height: auto;
+			box-sizing: border-box;
+			margin-right: 0.5%;
+			margin-left: 0.5%;
+			background:#ABABAB;
+			padding: 0.5%;
+			padding-bottom: 0;
+			overflow: hidden;
+			justify-content: flex-end;
+			align-items: stretch;
+			display: flex;
+
+			li{
+				list-style: none;
+				display:flex;
+				width: 20%;
+				height: 60px;
+				padding: 1%;
+				text-align: center;
+				overflow: hidden;
+				box-sizing: border-box;
+				align-items: center; 
+				justify-content: center;
+				float: left;
+				margin-right: 0.5%;
+				color:#fff;
+				cursor: pointer;
+
+			}
+		}
+	}
+	#frames{
+		width: 95%;
+		height: auto;
+		box-sizing: border-box;
+		overflow: hidden;
+		padding: 1%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+
+		.pres-inf{
+			width: 100%;
+			height: auto;
+			padding: 0%;
+			display: none;
+		}
+	}
+
+
+}
+
+
+.select {
+	cursor: pointer;
+	background-color:$color-ins;
+	}
+.active {
+	background-color: #7F2B56;
+	color: #FFF; 
+	}
